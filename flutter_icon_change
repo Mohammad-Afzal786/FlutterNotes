@@ -12,5 +12,9 @@ flutter_launcher_icons:   # 👈 sahi naam
   remove_alpha_ios: true
 
 
+# 👈 Ab command  dobara run karo:
+flutter pub get
+dart run flutter_launcher_icons
 
-
+# 👈 App dubara build/run karo:
+flutter run
