@@ -1,0 +1,32 @@
+import 'package:flutter/material.dart';
+import 'package:mmherbel/utils/app_colors.dart';
+
+class AppTheme {
+  static ThemeData lightTheme = ThemeData(
+    primaryColor: AppsColors.primary,
+
+    // ✅ Checkbox Global Style
+    checkboxTheme: CheckboxThemeData(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(4), // ✅ Rounded tick box
+      ),
+      side: const BorderSide(
+        color: Colors.grey, // ✅ Normal border color
+        width: 1.5,
+      ),
+      fillColor: WidgetStateProperty.resolveWith<Color>((states) {
+        if (states.contains(WidgetState.selected)) {
+          return AppsColors.primary; // ✅ Tick box filled with green when selected
+        }
+        return Colors.white; // ✅ Background white when not selected
+      }),
+      checkColor: WidgetStateProperty.all<Color>(Colors.white), // ✅ Tick color (inside)
+    ),
+  
+  );
+}
+
+// ✅ ab isko main.dart m theme ko rkhna h 
+theme: AppTheme.lightTheme,
+
+
