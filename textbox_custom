@@ -1,0 +1,54 @@
+/// =============================================================
+              /// 📧 Email Field
+              /// =============================================================
+              Focus(
+                child: Builder(
+                  builder: (context) {
+                    final hasFocus = Focus.of(context).hasFocus;
+
+                    return TextField(
+                      controller: emailController,
+                      style: TextStyle(fontSize: 16.sp), // 👈 responsive text
+                      decoration: InputDecoration(
+                        labelText: "Email",
+                        // ✅ Normal = grey, Focused = green
+                        labelStyle: TextStyle(
+                          fontSize: 14.sp,
+                          color: hasFocus ? AppsColors.primary : Colors.grey,
+                        ),
+
+                        // ✅ Normal Border
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(8.r),
+                          borderSide: const BorderSide(
+                            color: Colors.grey,
+                            width: 1,
+                          ),
+                        ),
+
+                        // ✅ Focused Border
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(8.r),
+                          borderSide: BorderSide(
+                            color: AppsColors.primary,
+                            width: 1,
+                          ),
+                        ),
+
+                        prefixIcon: Icon(
+                          Icons.email_outlined,
+                          size: 20.sp,
+                          color: hasFocus
+                              ? AppsColors.primary
+                              : Colors.grey, // icon भी साथ में change
+                        ),
+
+                        contentPadding: EdgeInsets.symmetric(
+                          vertical: 10.h,
+                          horizontal: 12.w,
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              ),
