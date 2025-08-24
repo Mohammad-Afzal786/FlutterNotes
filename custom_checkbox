@@ -12,7 +12,7 @@ class AppTheme {
       ),
       side: const BorderSide(
         color: Colors.grey, // ✅ Normal border color
-        width: 1.5,
+        width: 1.6,
       ),
       fillColor: WidgetStateProperty.resolveWith<Color>((states) {
         if (states.contains(WidgetState.selected)) {
