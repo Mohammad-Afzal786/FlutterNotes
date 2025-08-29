@@ -1,6 +1,8 @@
 ## Github command 
 
-## github comamnd jb ki purani repo ko fr se new trh se uplod krna chahte h
+ <p align="center">
+   github comamnd jb ki purani repo ko fr se new trh se uplod krna chahte h
+</p>
 ````
 git clone https://github.com/Mohammad-Afzal786/deep_link.git
 cd deep_link
@@ -18,4 +20,5 @@ git remote add origin https://github.com/Mohammad-Afzal786/deep_link.git
 git add .
 git commit -m "Initial commit"
 git push -f origin main
+
 ````
